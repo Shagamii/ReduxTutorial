@@ -1,3 +1,39 @@
+import { actionTypes } from '../actionTypes';
+
+const { TODO } = actionTypes;
+
+function initialState() {
+  return {
+    todo: []
+  };
+}
+
+function whenAddTodo(state, text) {
+  const nextId = Math.random();
+  const todos = state.todos;
+
+  todos.push({id : nextId, text, completed: false});
+
+  return { ...state, todos };
+}
+
+function whenToggleTodo(state, todos) {
+  return { ...state, todos }
+}
+
+
+export default function todoList(state = initialState(), event) {
+  switch (event.type) {
+    case TODO.ADD_TODO:
+      return whenAddTodo(state, event.text);
+    case TODO.TOGGLE_TODO:
+
+      break;
+    default:
+
+  }
+}
+
 const todo = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_TODO':
