@@ -12,7 +12,7 @@ const Link = ({ active, children, onClick }) => {
          onClick()
        }}
     >
-      {children}
+      {children}      
     </a>
   )
 }
