@@ -12,6 +12,7 @@ import VisibleTodoList from '../containers/VisibleTodoList'
 // )
 //
 // export default App
+import * as appActions from '../actions/App';
 
 export default class App extends Component {
   render() {
