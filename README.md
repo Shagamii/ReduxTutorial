@@ -1,1 +1,1 @@
-# ReduxTutorial(official -> my coding style)
+# ReduxTutorial
